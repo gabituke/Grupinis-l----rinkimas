@@ -37,7 +37,7 @@ Router.post('/new', upload.single('photo'), async (req, res) => {
 
         await db.Stories.create(req.body)
         console.log(req.body)
-        res.send('Darbuotojas sėkmingai išsaugotas')
+        res.send('Istorija sekmingai prideta')
     } catch(error) {
         console.log(error)
         res.status(500).send('Įvyko klaida išssaugant duomenis')
