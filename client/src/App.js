@@ -31,8 +31,9 @@ const App = () => {
            
            
             <Route path="/" element={<AllStories />} />
+            <Route path="/new-story" element={<NewStory />} />
             
-            <Route path="/:id" element={<SingleStory />} />
+            <Route path="/stories/:id" element={<SingleStory />} />
             
           </Routes>
         </div>

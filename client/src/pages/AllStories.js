@@ -30,7 +30,7 @@ const AllStories = () => {
 					});
 				});
 		},
-		[ refresh ]
+		[ ]
 	);
 
 	return (
@@ -41,11 +41,13 @@ const AllStories = () => {
 			{alert.message && <div className={'alert alert-' + alert.status}>{alert.message}</div>}
 
             {stories && stories.map(story =>
+            <Link to={'/stories/' + story.id}>
                 <div key={story.id} style={{ marginBottom: 30, borderBottom: '3px solid black' }}>
                     <div><strong>{story.title}</strong></div>
-                    <div>{story.story}</div>
+                    <div>{story.photo}</div>
                     <div>Reikalingos lesos:{story.amount}</div>
                 </div>
+                </Link>
             )}
 		</div>
 		</>

@@ -76,7 +76,11 @@ const SingleStory = () => {
         
         <div className="single-post">
                 <h1>{story.title}</h1>
-                <img src={story.photo} alt='' />
+                <div>
+
+                <img src={story.photo} alt={story.title}/>
+
+                </div>
                 <div className="content">
                     {story.story}
                 </div>
@@ -89,7 +93,7 @@ const SingleStory = () => {
                         {story.donation.map(entry => 
                             <div key={entry.id} className="pb-3 mb-3 border-bottom comment" style={{ borderColor: 'grey' }}>
                                 <div className="user mb-2">
-                                    <strong className="date d-block">{entry.donation.donator_name + ' ' + entry.donation.last_name}</strong>
+                                    <strong className="date d-block">{entry.donation.donator_name + ' ' + entry.donation.donation_sum}</strong>
                                  
                                 </div>
                                 <div style={{whiteSpace: "pre-line"}}>
